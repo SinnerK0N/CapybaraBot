@@ -1,0 +1,24 @@
+{
+  "name": "nanukbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.0.2",
+    "dotenv": "^16.0.0",
+    "network-speed": "^2.1.1",
+    "node-fetch": "^2.6.7",
+    "pi-temperature": "^2.1.0",
+    "ping": "^0.4.2",
+    "rss-converter": "^1.1.6",
+    "steamapi": "^2.2.0",
+    "steamid": "^2.0.0",
+    "systeminformation": "^5.11.15",
+    "ytdl-core": "^4.11.2"
+  }
+}
