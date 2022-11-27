@@ -23,7 +23,7 @@ module.exports = {
                         channel.videos = json;
                         await configManager.writeConfig("main", config);
 
-                        let composedMsg = "<@&1041750093080051795> <@" + channel.discord_id + "> posted a new video:\n" + rss_feed.items[0].link;
+                        let composedMsg = "<@&" + config.roles.server.uploads + "> <@" + channel.discord_id + "> posted a new video:\n" + rss_feed.items[0].link;
                         await discordBot.Messaging.sendMsgToChannel("videos", composedMsg);
                     }
                 }
