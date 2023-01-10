@@ -194,16 +194,16 @@ module.exports = {
             }
 
             if (interaction.values.includes("mc")) {
-                if (interaction.member.roles.cache.find(role => role.id === config.roles.games.sot)) {
+                if (interaction.member.roles.cache.find(role => role.id === config.roles.games.minecraft)) {
                     keptRoles.push("Minecraft");
                 } else {
-                    let role = interaction.guild.roles.cache.find(role => role.id === config.roles.games.sot);
+                    let role = interaction.guild.roles.cache.find(role => role.id === config.roles.games.minecraft);
                     await interaction.member.roles.add(role);
                     addedRoles.push("Minecraft");
                 }
             } else {
-                if (interaction.member.roles.cache.some(role => role.id === config.roles.games.sot)) {
-                    let role = interaction.guild.roles.cache.find(role => role.id === config.roles.games.sot);
+                if (interaction.member.roles.cache.some(role => role.id === config.roles.games.minecraft)) {
+                    let role = interaction.guild.roles.cache.find(role => role.id === config.roles.games.minecraft);
                     await interaction.member.roles.remove(role);
                     removedRoles.push("Minecraft")
                 }
