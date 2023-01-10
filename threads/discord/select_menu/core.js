@@ -192,6 +192,22 @@ module.exports = {
                     removedRoles.push("Sea of Thieves")
                 }
             }
+
+            if (interaction.values.includes("mc")) {
+                if (interaction.member.roles.cache.find(role => role.id === config.roles.games.sot)) {
+                    keptRoles.push("Minecraft");
+                } else {
+                    let role = interaction.guild.roles.cache.find(role => role.id === config.roles.games.sot);
+                    await interaction.member.roles.add(role);
+                    addedRoles.push("Minecraft");
+                }
+            } else {
+                if (interaction.member.roles.cache.some(role => role.id === config.roles.games.sot)) {
+                    let role = interaction.guild.roles.cache.find(role => role.id === config.roles.games.sot);
+                    await interaction.member.roles.remove(role);
+                    removedRoles.push("Minecraft")
+                }
+            }
         }
 
         /*
